@@ -20,6 +20,7 @@ export const authSlice = createSlice({
 			state.isLoading = false
 			state.user = action.payload
 			setItem('user', JSON.stringify(action.payload))
+			state.error = null
 		},
 		signUserFailure: (state, action) => {
 			state.isLoading = false

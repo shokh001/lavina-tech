@@ -2,8 +2,9 @@ const Input = ({ label, name, state, setState, type = 'text', alert = false, set
 	return (
 		<>
 			{
-				alert && state === '' && <span className="text-danger m-1 d-block text-left">Required {label}*</span>
-			}	
+				alert && state === '' && type !== 'email' && <span className="text-danger m-1 d-block text-left">Required {label}*</span>
+			}
+			{type === 'email' && alert && <span className="text-danger m-1 d-block text-left">Required {label}* @	</span>}
 			<div className='form-floating'>
 				<input
 					name={name}

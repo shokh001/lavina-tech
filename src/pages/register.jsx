@@ -19,7 +19,7 @@ const Register = () => {
 
 	const registerHandler = async e => {
 		e.preventDefault()
-		if (name !== '' && email !== '', key !== '', secret !== '') {
+		if (name !== '' && email.includes('@') && key !== '' && secret !== '') {
 			dispatch(signUserStart())
 			const user = { name, email, key, secret }
 			try {
