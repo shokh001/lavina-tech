@@ -1,0 +1,43 @@
+* {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto !important;
+}
+
+.book-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card .status {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: aqua;
+}
+
+.book-card .Finished {
+  background-color: rgb(255, 0, 0);
+}
+
+.book-card .Reading {
+  background-color: rgb(255, 194, 80);
+}
+
+.book-card .New {
+  background-color: rgb(163, 252, 29);
+}
+
+.book-card .book-cover {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 250px;
+  transform: scale(1.05);
+}
