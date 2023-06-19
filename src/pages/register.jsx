@@ -38,11 +38,11 @@ const Register = () => {
 		if (loggedIn) {
 			navigate('/')
 		}
-	}, [loggedIn])
+	}, [loggedIn, navigate])
 
 	return (
 		<div className='text-center mt-5'>
-			<main className='form-signin w-25 m-auto'>
+			<main className='form-signin w-50 m-auto'>
 				<form>
 					<img className='mb-2' src={icon} alt='' width='90' height='90' />
 					<h1 className='h3 mb-3 fw-normal'>Please register</h1>
