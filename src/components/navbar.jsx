@@ -1,11 +1,11 @@
-import {useDispatch, useSelector} from 'react-redux'
-import {Link, useNavigate} from 'react-router-dom'
-import {logo} from '../constants'
-import {removeItem} from '../helpers/persistance-storage'
-import {logoutUser} from '../slice/auth'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import { logo } from '../constants'
+import { removeItem } from '../helpers/persistance-storage'
+import { logoutUser } from '../slice/auth'
 
 const Navbar = () => {
-	const {loggedIn, user} = useSelector(state => state.auth)
+	const { loggedIn, user } = useSelector(state => state.auth)
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
 
@@ -34,9 +34,6 @@ const Navbar = () => {
 					</>
 				) : (
 					<>
-						{/* <Link className='me-3 py-2 text-dark text-decoration-none' to={'/login'}>
-							Login
-						</Link> */}
 						<Link className='me-3 py-2 text-dark text-decoration-none' to={'/register'}>
 							Register
 						</Link>
